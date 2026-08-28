@@ -7,7 +7,6 @@ import cookieParser from "cookie-parser";
 import db from "./config/db.js";
 
 dotenv.config();
-db();
 
 const app = express();
 const PORT = process.env.PORT;
@@ -60,4 +59,5 @@ app.get("/", (req, res) => {
 
 server.listen(PORT, () => {
   console.log(`Server running on ${PORT}`);
+  db();
 });
